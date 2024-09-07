@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>453</width>
+    <height>384</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>453</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>453</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>421</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="loginPage">
+     <widget class="QPushButton" name="loginButton">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>250</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(255, 187, 158);
+	color: rgb(60, 61, 55);
+	font: Bold 12pt &quot;Courier&quot;;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 140, 105);
+}
+
+QPushButton:pressed {
+    background-color: rgb(255, 140, 105);
+}</string>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="loginLabel">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Typo_Deco 입체빗금</family>
+        <pointsize>32</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	color: rgb(255, 140, 105);
+	font: 32pt &quot;Typo_Deco 입체빗금&quot;;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>User Login</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="usernameInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	border-radius: 9px;
+	padding-left: 10px;
+	border: 2px solid rgb(202, 217, 209);
+}
+
+QLineEdit:focus {
+	border-color: rgb(158, 211, 184);
+	background-color: rgb(245, 248, 246);
+	box-shadow: 0 0 5px rgba(158, 211, 184, 0.5);
+}
+</string>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="passwordInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>180</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	border-radius: 9px;
+	padding-left: 10px;
+	border: 2px solid rgb(202, 217, 209);
+}
+
+QLineEdit:focus {
+	border-color: rgb(158, 211, 184);
+	background-color: rgb(245, 248, 246);
+	box-shadow: 0 0 5px rgba(158, 211, 184, 0.5);
+}
+</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="converterPage">
+     <widget class="QComboBox" name="currencyFromComboBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+	color: rgb(120, 138, 117);
+}
+
+QComboBox::item:disabled {
+    font-weight: normal;
+}</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <item>
+       <property name="text">
+        <string>GEL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>USD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EUR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TRY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CNY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KRW</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="currencyToComboBox">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>50</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+	color: rgb(120, 138, 117);
+}
+
+QComboBox::item:disabled {
+    font-weight: normal;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>USD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GEL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EUR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TRY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>CNY</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KRW</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="amountInput">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Courier New</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	border-radius: 9px;
+	border: 2px solid rgb(202, 217, 209);
+}
+
+QLineEdit:focus {
+	border-color: rgb(158, 211, 184);
+	background-color: rgb(245, 248, 246);
+	box-shadow: 0 0 5px rgba(158, 211, 184, 0.5);
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Amount to convert</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="convertButton">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>170</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(255, 187, 158);
+	color: rgb(60, 61, 55);
+	font: Bold 10pt &quot;Courier&quot;;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 140, 105);
+}
+
+QPushButton:pressed {
+    background-color: rgb(255, 140, 105);
+}</string>
+      </property>
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="clearButton">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>270</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(202, 217, 209);
+	color: rgb(60, 61, 55);
+	font: Bold 10pt &quot;Courier&quot;;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgb(120, 138, 117);
+}
+
+QPushButton:pressed {
+    background-color: rgb(120, 138, 117);
+}</string>
+      </property>
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="resultLabel">
+      <property name="geometry">
+       <rect>
+        <x>46</x>
+        <y>230</y>
+        <width>311</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	font: Bold 10pt &quot;Courier New&quot;;
+	color: rgb(60, 61, 55);
+}</string>
+      </property>
+      <property name="text">
+       <string>Conversion Result:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currencyFromLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	font: Bold 8pt &quot;Courier New&quot;;
+	color: rgb(60, 61, 55);
+}</string>
+      </property>
+      <property name="text">
+       <string>Currency to Convert from:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currencyToLabel">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>30</y>
+        <width>171</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+	font: Bold 8pt &quot;Courier New&quot;;
+	color: rgb(60, 61, 55);
+}</string>
+      </property>
+      <property name="text">
+       <string>Currency to Convert to:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="logoutButton">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>270</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(202, 217, 209);
+	color: rgb(60, 61, 55);
+	font: Bold 10pt &quot;Courier&quot;;
+	border-radius: 10px;
+}
+
+QPushButton:hover {
+    background-color: rgb(120, 138, 117);
+}
+
+QPushButton:pressed {
+    background-color: rgb(120, 138, 117);
+}</string>
+      </property>
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>453</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
