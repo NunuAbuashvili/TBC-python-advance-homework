@@ -28,7 +28,7 @@ Log in using the following credentials:
 - Enter the amount you want to convert.
 - Click "Convert" to see the result.
 - Use "Clear" to reset the form. 
-- -Click "Logout" to return to the login page.
+- Click "Logout" to return to the login page.
 
 *Restrictions*:
 - You cannot convert between the same currencies.
