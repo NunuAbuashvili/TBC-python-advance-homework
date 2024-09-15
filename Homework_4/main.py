@@ -19,6 +19,7 @@ class PostFetcher:
         semaphore (asyncio.Semaphore): A semaphore to limit concurrent requests.
         lock (asyncio.Lock): A lock to ensure thread-safe file operations.
     """
+
     def __init__(self, filename: str, number_of_posts: int, concurrent_requests: int):
         """
         Initializes the PostFetcher with the given parameters.

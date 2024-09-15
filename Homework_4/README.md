@@ -1,6 +1,6 @@
 # Asynchronous Post Fetcher #
 This project uses Python's `asyncio` library to fetch posts from the JSONPlaceholder API,
-and write them to a JSON file. It also provides functionality to verify the operation
+and write them to a JSON file. It also provides functionality to verify the operation.
 
 ## Features ##
 - Asynchronous fetching of posts from JSONPlaceholder API.
