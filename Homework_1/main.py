@@ -1,6 +1,7 @@
 import os
 import tkinter as tk
 from tkinter import messagebox
+
 import requests
 
 API_KEY = os.environ.get('API_KEY')
@@ -9,9 +10,8 @@ CURRENCIES = ['GEL', 'USD', 'EUR', 'TRY', 'CNY', 'KRW']
 
 
 class Converter(tk.Tk):
-    """
-    Main application class for the Currency Converter GUI.
-    """
+    """Main application class for the Currency Converter GUI."""
+
     def __init__(self):
         super().__init__()
         self.title('Currency Converter')
@@ -92,17 +92,14 @@ class Converter(tk.Tk):
             messagebox.showerror(f'Error: {error}')
 
     def clear(self):
-        """
-        Clears the amount input field and resets the result display.
-        """
+        """Clears the amount input field and resets the result display."""
         self.conversion_frame.entry.delete(0, tk.END)
         self.result_frame.conversion_result.config(text='Conversion Result:')
 
 
 class Currencies(tk.Frame):
-    """
-    Frame for selecting the source and target currencies.
-    """
+    """Frame for selecting the source and target currencies."""
+
     def __init__(self, parent):
         super().__init__(parent)
         self.selected_currency_from = tk.StringVar(value='GEL')
@@ -116,9 +113,7 @@ class Currencies(tk.Frame):
         self.position_widgets()
 
     def position_widgets(self):
-        """
-        Positions the currency selection dropdown menus and their labels.
-        """
+        """Positions the currency selection dropdown menus and their labels."""
         for index, frame in enumerate([self.from_frame, self.to_frame]):
             frame.grid(row=0, column=index, padx=5, pady=30, sticky=tk.NSEW)
         for index, menu in enumerate([self.from_menu, self.to_menu]):
@@ -129,9 +124,8 @@ class Currencies(tk.Frame):
 
 
 class AmountToConvert(tk.Frame):
-    """
-    Frame for entering the amount to convert and initiating conversion.
-    """
+    """Frame for entering the amount to convert and initiating conversion."""
+
     def __init__(self, parent):
         super().__init__(parent)
         self.label = tk.Label(
@@ -149,9 +143,8 @@ class AmountToConvert(tk.Frame):
 
 
 class Result(tk.Frame):
-    """
-    Frame for displaying the conversion result and 'clear' button.
-    """
+    """Frame for displaying the conversion result and 'clear' button."""
+
     def __init__(self, parent):
         super().__init__(parent)
 
@@ -166,11 +159,10 @@ class Result(tk.Frame):
 
 
 def main():
-    """
-    Initialize and run the Currency Converter application.
-    """
+    """Initialize and run the Currency Converter application."""
     app = Converter()
     app.mainloop()
+
 
 if __name__ == '__main__':
     main()
