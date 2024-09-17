@@ -34,6 +34,7 @@ provides functionality to verify the operation.
 - `posts.json`: The file where the fetched posts will be saved.
 - `main.py`: The main Python script file containing the logic for fetching and writing posts.
 - `execution_result.jpg`: Screenshot of the execution time.
+- `requirements.txt`: Contains a list of packages or libraries needed to work on the project.
 - `README.md`: Project description.
 
 ## Performance
