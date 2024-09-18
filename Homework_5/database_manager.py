@@ -122,7 +122,7 @@ class DatabaseManager:
         """ Retrieve and print details of the book(s) with the maximum number of pages. """
         cursor = self.connection.cursor()
         cursor.execute("""
-               SELECT title, genre, number_of_pages, publish_date, author_id 
+               SELECT title, genre, number_of_pages, publish_date, author_id
                FROM books 
                WHERE number_of_pages = (SELECT MAX(number_of_pages) FROM books)
         """)
@@ -134,7 +134,8 @@ class DatabaseManager:
             cursor.execute("SELECT name, lastname FROM authors WHERE id = ?", (author_id,))
             author_name, author_lastname = cursor.fetchone()
             print(
-                f'\t - "{title}" by {author_name} {author_lastname} with {number_of_pages} pages, '
+                f'\t - "{title}" by {author_name} {author_lastname}'
+                f'(genre: {genre}) with {number_of_pages} pages, '
                 f'published on {publish_date}.'
             )
 
@@ -185,7 +186,7 @@ class DatabaseManager:
             print('\nAll authors have already published books.')
 
     def get_authors_with_more_than_three_books(self):
-        """ Retrieve and print the names of authors who have published more than three books. """
+        """ Retrieve and print the names of five authors who have published more than three books. """
         cursor = self.connection.cursor()
         cursor.execute("""
              SELECT a.name, a.lastname, COUNT(b.author_id) AS book_count
@@ -194,7 +195,7 @@ class DatabaseManager:
              GROUP BY a.id
              HAVING COUNT(b.author_id) > 3
         """)
-        authors_with_more_than_three_books = cursor.fetchall()
+        authors_with_more_than_three_books = cursor.fetchmany(5)
         print('\nAuthor(s) who have published more than three books:')
 
         if authors_with_more_than_three_books:
