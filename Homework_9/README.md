@@ -26,7 +26,7 @@ The Academic Performance Analyser is a Python-based tool designed to analyze aca
 1. Clone this repository or download the source code.
 2. Install the required packages:
     ```bash
-    pip install pandas matplotlib
+    pip install -r requirements.txt
 
 ## Usage
 1. Ensure your student data is in a CSV file named `student_scores_random_names.csv` in the same directory as the script.
